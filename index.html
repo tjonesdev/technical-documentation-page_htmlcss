@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page | HTML/CSS</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Open+Sans&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<nav id="navbar">
+  <header>
+    <h1>JavaScript Methods</h1>
+  </header>
+  <div id="nav-links">
+    <a href="#introduction" class="nav-link main-link">Introduction</a>
+    <a href="#add_items_to_an_array" class="nav-link main-link">Add Items to an Array</a>
+    <a href="#push" class="link sub-link">Array.push()</a>
+    <a href="#unshift" class="link sub-link">Array.unshift()</a>
+    <a href="#concat" class="link sub-link">Array.concat()</a>
+    <a href="#remove_items_from_an_array" class="nav-link main-link">Remove Items from an Array</a>
+    <a href="#pop" class="link sub-link">Array.pop()</a>
+    <a href="#shift" class="link sub-link">Array.shift()</a>
+    <a href="#add,_remove,_and_copy_items_from_an_array" class="nav-link main-link">Add, Remove, and Copy Items from an Array</a>
+    <a href="#splice" class="link sub-link">Array.splice()</a>
+    <a href="#slice" class="link sub-link">Array.slice()</a>
+    <a href="#check_for_the_presence_of_an_element_in_an_array" class="nav-link main-link">Check for the Presence of an Element in an Array</a>
+    <a href="#index_of" class="link sub-link">Array.indexOf()</a>
+    <a href="#extract_data_from_an_array" class="nav-link main-link">Extract Data from an Array</a>
+    <a href="#map" class="link sub-link">Array.map()</a>
+    <a href="#filter" class="link sub-link">Array.filter()</a>
+    <a href="#analyze_data_in_an_array" class="nav-link main-link">Analyze Data in an Array</a>
+    <a href="#reduce" class="link sub-link">Array.reduce()</a>
+    <a href="#sort_an_array" class="nav-link main-link">Sort an Array</a>
+    <a href="#sort" class="link sub-link">Array.sort()</a>
+    <a href="#reverse" class="link sub-link">Array.reverse()</a>
+    <a href="#string-to-array_&_array-to-string" class="nav-link main-link">String-to-Array & Array-to-String</a>
+    <a href="#split" class="link sub-link">Str.split()</a>
+    <a href="#join" class="link sub-link">Array.join()</a>
+    <a href="#check_criteria_of_the_elements_in_an_array" class="nav-link main-link">Check Criteria of the Elements in an Array</a>
+    <a href="#every" class="link sub-link">Array.every()</a>
+    <a href="#some" class="link sub-link">Array.some()</a>
+    <a href="#references" class="nav-link main-link">References</a>
+  </div>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="introduction">
+    <header>
+      <h2>Introduction</h2>
+    </header>
+    <p>A <b>method</b> is a function which is a property of an object. There are two kind of methods: Instance Methods which are built-in tasks performed by an object instance, or Static Methods which are tasks that are called directly on an object constructor.</p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="ref-links">MDN - Array Methods</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="ref-links">MDN - String Methods</a></li>
+    </ul>
+  </section>
+  <section class="main-section" id="add_items_to_an_array">
+    <header>
+      <h2>Add Items to an Array</h2>
+    </header>
+    <section class="sub-section" id="push">
+      <h3>Array.push()</h3>
+      <p>The <code class="name">push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>
+      <p class="mutate">Mutates the original array!</p>
+      <p class="note">Functional programming alternative: <span class="alt">Array.concat()</span>.</p>
+      <div class="example-container"><pre class="example"><code class="example">
+let twentyThree = 'XXIII';
+      
+let romanNumerals = ['XXI', 'XXII'];
+
+romanNumerals.push(twentyThree);
+// now equals ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.</code></pre></div>
+    </section>  
+    <section class="sub-section" id="unshift">
+      <h3>Array.unshift()</h3>
+      <p>The <code class="name">unshift()</code> method adds one or more elements to the beginning of an array and returns the new length of the array.</p>
+      <p class="mutate">Mutates the original array!</p>
+      <div class="example-container"><pre class="example"><code class="example">
+let twentyThree = 'XXIII';
+      
+let romanNumerals = ['XXI', 'XXII'];
+
+romanNumerals.unshift('XIX', 'XX');
+// now equals ['XIX', 'XX', 'XXI', 'XXII']</code></pre></div>
+    </section>
+    <section class="sub-section" id="concat">
+      <h3>Array.concat()</h3>
+      <p>The <code class="name">concat()</code> method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+       <div class="example-container"><pre class="example"><code class="example">
+[1, 2, 3].concat([4, 5, 6]);
+// Returns a new array [1, 2, 3, 4, 5, 6]</code></pre></div>
+    </section>
+  </section>
+  <section class="main-section" id="remove_items_from_an_array">
+    <header>
+      <h2>Remove Items from an Array</h2>
+    </header>
+    <section class="sub-section" id="pop">
+      <h3>Array.pop()</h3>
+      <p>The <code class="name">pop()</code> method removes the last element from an array and returns that element. This method changes the length of the array.</p>
+      <p class="mutate">Mutates the original array!</p>
+       <div class="example-container"><pre class="example"><code class="example">
+let greetings = ['whats up?', 'hello', 'see ya!'];
+
+greetings.pop();
+// now equals ['whats up?', 'hello']
+
+// We can also return the value of the removed element like this:
+let popped = greetings.pop();
+// returns 'hello'
+// greetings now equals []
+</code></pre></div>
+    </section>
+    <section class="sub-section" id="shift">
+      <h3>Array.shift()</h3>
+      <p>The <code class="name">shift()</code> method removes the first element from an array and returns that removed element. This method changes the length of the array.</p>
+      <p class="mutate">Mutates the original array!</p>
+      <div class="example-container"><pre class="example"><code class="example">
+let greetings = ['whats up?', 'hello', 'see ya!'];
+
+greetings.shift();
+// now equals ['hello']
+
+// We can also return the value of the removed element like this:
+let shifted = greetings.shift();
+// returns 'hello'
+// greetings now equals []
+</code></pre></div>
+    </section>
+  </section>
+  <section class="main-section" id="add,_remove,_and_copy_items_from_an_array">
+    <header>
+      <h2>Add, Remove, and Copy Items from an Array</h2>
+    </header>
+    <section class="sub-section" id="splice">
+      <h3>Array.splice()</h3>
+      <p>The <code class="name">splice()</code> method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>Represents the index on the array from which to begin removing elements.</li>
+        <li>Indicates the number of elements to delete.</li>
+        <li>Comprised of one or more element(s), to add to the array.</li>
+      </ol>
+      <p class="note">If the second argument is not provided, the default is to remove items through the end.</p>
+      <p class="mutate">Mutates the original array!</p>
+      <p class="note">Functional programming alternative: <span class="alt">Array.slice()</span>.</p>
+      <p>Demonstrates parameters 1 and 2:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+let array = ['today', 'was', 'not', 'so', 'great'];
+
+array.splice(2, 2);
+// remove 2 elements beginning with the 3rd element
+// array now equals ['today', 'was', 'great']
+
+// It modifies the array it's being called on, but it also returns a new array containing the value of the removed elements:
+let array = ['I', 'am', 'feeling', 'really', 'happy'];
+
+let newArray = array.splice(3, 2);
+// newArray equals ['really', 'happy']
+</code></pre></div>
+      <p>Demonstrates parameter 3:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+const numbers = [10, 11, 12, 12, 15];
+const startIndex = 3;
+const amountToDelete = 1;
+
+numbers.splice(startIndex, amountToDelete, 13, 14);
+// the second entry of 12 is removed, and we add 13 and 14 at the same index
+console.log(numbers);
+// returns [ 10, 11, 12, 13, 14, 15 ]
+</code></pre></div>
+    </section>
+    <section class="sub-section" id="slice">
+      <h3>Array.slice()</h3>
+      <p>The <code class="name">slice()</code> method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>The index at which to begin extraction.</li>
+        <li>The index at which to stop extraction (extraction will occur up to, but not including the element at this index).</li>
+      </ol>
+      <p class="note"> If the arguments are not provided, the default is to start at the beginning of the array through the end, which is an easy way to make a copy of the entire array.</p>
+      <div class="example-container"><pre class="example"><code class="example">
+let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+
+let todaysWeather = weatherConditions.slice(1, 3);
+// todaysWeather equals ['snow', 'sleet'];
+// weatherConditions still equals ['rain', 'snow', 'sleet', 'hail', 'clear']
+</code></pre></div>
+    </section>
+  </section>
+  <section class="main-section" id="check_for_the_presence_of_an_element_in_an_array">
+    <header>
+      <h2>Check for the Presence of an Element in an Array</h2>
+    </header>
+    <section class="sub-section" id="index_of">
+      <h3>Array.indexOf()</h3>
+      <p>The <code class="name">indexOf()</code> method returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>Takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.</li>
+      </ol>
+      <div class="example-container"><pre class="example"><code class="example">
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+fruits.indexOf('dates'); // returns -1
+fruits.indexOf('oranges'); // returns 2
+fruits.indexOf('pears'); // returns 1, the first index at which the element exists
+</code></pre></div>
+    </section>
+  </section>
+    <section class="main-section" id="extract_data_from_an_array">
+    <header>
+      <h2>Extract Data from an Array</h2>
+    </header>
+    <section class="sub-section" id="map">
+      <h3>Array.map()</h3>
+      <p>The <code class="name">map()</code> method creates a new array populated with the results of calling a provided function on every element in the calling array.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>The current element being processed.</li>
+        <li>The index of that element.</li>
+        <li>The array upon which the map method was called.</li>
+      </ol>
+      <p>This example utilizes only the first parameter:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+
+const names = users.map(user => user.name);
+console.log(names); // [ 'John', 'Amy', 'camperCat' ]
+</code></pre></div>
+    </section>
+    <section class="sub-section" id="filter">
+      <h3>Array.filter()</h3>
+      <p>The <code class="name">filter()</code> method creates a new array with all elements that pass the test implemented by the provided function.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>The current element being processed.</li>
+        <li>The index of that element.</li>
+        <li>The array upon which the filter method was called.</li>
+      </ol>
+      <p>This example utilizes only the first parameter:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+
+const usersUnder30 = users.filter(user => user.age < 30);
+console.log(usersUnder30); // [ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]
+</code></pre></div>
+    </section>
+  </section>
+    <section class="main-section" id="analyze_data_in_an_array">
+    <header>
+      <h2>Analyze Data in an Array</h2>
+    </header>
+    <section class="sub-section" id="reduce">
+      <h3>Array.reduce()</h3>
+      <p>The <code class="name">reduce()</code> method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>Callback Function Arguments:</li>
+        <ol>
+          <li>Known as the accumulator, it gets assigned the return value of the callback function from the previous iteration.</li>
+          <li>The current element being processed.</li>
+          <li>The index of that element.</li>
+          <li>The array upon which reduce is called.</li>
+        </ol>
+        <li>Takes an initial value for the accumulator. If this second parameter is not used, then the first iteration is skipped and the second iteration gets passed the first element of the array as the accumulator.</li>
+      </ol>
+      <p>These examples utilize both parameters and only the first and second arguments of the first parameter.</p>
+      <p>Example 1: Sum of all ages</p>
+      <div class="example-container"><pre class="example"><code class="example">
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+
+const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
+console.log(sumOfAges); // 64
+</code></pre></div>
+      <p>Example 2: Property and value pairs</p>
+      <div class="example-container"><pre class="example"><code class="example">
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+
+const usersObj = users.reduce((obj, user) => {
+  obj[user.name] = user.age;
+  return obj;
+}, {});
+console.log(usersObj); // { John: 34, Amy: 20, camperCat: 10 }
+</code></pre></div>
+    </section>
+  </section>
+    <section class="main-section" id="sort_an_array">
+    <header>
+      <h2>Sort an Array</h2>
+    </header>
+    <section class="sub-section" id="sort">
+      <h3>Array.sort()</h3>
+      <p>The <code class="name">sort()</code> method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.</p>
+<p>The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.</p>
+      <p class="note">JavaScript's default sorting method is by string Unicode point value, which may return unexpected results. Therefore, it is encouraged to provide a callback function to specify how to sort the array items. When such a callback function, normally called compareFunction, is supplied, the array elements are sorted according to the return value of the compareFunction: If compareFunction(a,b) returns a value less than 0 for two elements a and b, then a will come before b. If compareFunction(a,b) returns a value greater than 0 for two elements a and b, then b will come before a. If compareFunction(a,b) returns a value equal to 0 for two elements a and b, then a and b will remain unchanged.</p>
+      <p class="mutate">Mutates the original array!</p>
+      <div class="example-container"><pre class="example"><code class="example">
+function ascendingOrder(arr) {
+  return arr.sort(function(a, b) {
+    return a - b;
+  });
+}
+ascendingOrder([1, 5, 2, 3, 4]);
+// Returns [1, 2, 3, 4, 5]
+
+function reverseAlpha(arr) {
+  return arr.sort(function(a, b) {
+    return a === b ? 0 : a &lt; b ? 1 : -1;
+  });
+}
+reverseAlpha(['l', 'h', 'z', 'b', 's']);
+// Returns ['z', 's', 'l', 'h', 'b']
+</code></pre></div>
+      <p class="note">Functional programming alternative: first concatenate an empty array to the one being sorted (remember that slice and concat return a new array), then run the sort method, like below:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+var globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  return [].concat(arr).sort(function(a, b) {
+    return a - b;
+  });
+}
+nonMutatingSort(globalArray);
+</code></pre></div>
+    </section>
+    <section class="sub-section" id="reverse">
+      <h3>Array.reverse()</h3>
+      <p>The <code class="name">reverse()</code> method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.</p>
+      <p class="mutate">Mutates the original array!</p>
+      <div class="example-container"><pre class="example"><code class="example">
+const array1 = ['one', 'two', 'three'];
+console.log('array1:', array1);
+// expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log('reversed:', reversed);
+// expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log('array1:', array1);
+// expected output: "array1:" Array ["three", "two", "one"]
+</code></pre></div>
+    </section>
+  </section>
+    <section class="main-section" id="string-to-array_&_array-to-string">
+    <header>
+      <h2>String-to-Array & Array-to-String</h2>
+    </header>
+    <section class="sub-section" id="split">
+      <h3>Str.split()</h3>
+      <p>The <code class="name">split()</code> method turns a String into an array of strings, by separating the string at each instance of a specified separator string.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>Can be a character to use to break up the string or a regular expression (For example, if the delimiter is a space, you get an array of words, and if the delimiter is an empty string, you get an array of each character in the string).</li>
+      </ol>
+      <div class="example-container"><pre class="example"><code class="example">
+var str = "Hello World";
+var bySpace = str.split(" ");
+// Sets bySpace to ["Hello", "World"]
+
+var otherString = "How9are7you2today";
+var byDigits = otherString.split(/\d/);
+// Sets byDigits to ["How", "are", "you", "today"]
+</code></pre></div>
+    </section>
+    <section class="sub-section" id="join">
+      <h3>Array.join()</h3>
+      <p>The <code class="name">join()</code> method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.</p>
+      <p>Parameters:</p>
+      <ol>
+        <li>Used to separate the array elements in the string.</li>
+      </ol>
+      <div class="example-container"><pre class="example"><code class="example">
+var arr = ["Hello", "World"];
+var str = arr.join(" ");
+// Sets str to "Hello World"
+</code></pre></div>
+    </section>
+  </section>
+    <section class="main-section" id="check_criteria_of_the_elements_in_an_array">
+    <header>
+      <h2>Check Criteria of the Elements in an Array</h2>
+    </header>
+    <section class="sub-section" id="every">
+      <h3>Array.every()</h3>
+      <p>The <code class="name">every()</code> method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.</p>
+      <p class="caution"><strong>Caution:</strong> Calling this method on an empty array will return true for any condition!</p>
+      <p>The following code would check if every element in the numbers array is less than 10:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+var numbers = [1, 5, 8, 0, 10, 11];
+numbers.every(function(currentValue) {
+  return currentValue &lt; 10;
+});
+// Returns false
+</code></pre></div>
+    </section>
+    <section class="sub-section" id="some">
+      <h3>Array.some()</h3>
+      <p>The <code class="name">some()</code> method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value. </p>
+      <p class="caution"><strong>Caution:</strong> Calling this method on an empty array returns false for any condition!</p>
+      <p>The following code would check if any element in the numbers array is less than 10:</p>
+      <div class="example-container"><pre class="example"><code class="example">
+var numbers = [10, 50, 8, 220, 110, 11];
+numbers.some(function(currentValue) {
+  return currentValue &lt; 10;
+});
+// Returns true
+</code></pre></div>
+    </section>
+  </section>
+  <section class="main-section" id="references">
+    <header>
+      <h2>References</h2>
+    </header>
+    <p>All of the definitions on this page are from <a href="https://developer.mozilla.org/en-US/" class="ref-links">MDN</a>. Most of the code snippets and notes are from <a href="https://www.freecodecamp.org/" class="ref-links">freeCodeCamp</a>.</p>
+  </section>
+</main>
+</body>
+</html>

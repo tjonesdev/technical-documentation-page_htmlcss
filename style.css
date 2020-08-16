@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 285px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+#navbar {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#navbar header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  margin: 0;
+  border-bottom: 4px solid #000;
+  width: 100%;
+}
+#navbar h1 {
+  padding: 0 1em;
+}
+#nav-links {
+  border-bottom: 1px solid black;
+  overflow-y: auto;
+  width: 100%;
+}
+.link, .nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  padding: 1em;
+  border-bottom: 1px solid #000;
+}
+.main-link {
+  font-weight: bold;
+}
+.sub-link {
+  padding: 1em 2.5em;
+  font-family: monospace;
+}
+#main-doc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+.main-section {
+  
+}
+header {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.25em;
+}
+h3 {
+    font-family: monospace;
+}
+p {
+  margin-left: 1.5em;
+}
+.name {
+  font-weight: bold;
+  background-color: #eee;
+  padding: 0 .25em;
+  color: maroon;
+}
+.note {
+  background-color: #c7e8ff;
+  padding: .5em;
+  border-left: 8px solid #26a6ff;
+}
+.alt {
+  font-family: monospace;
+  font-weight: bold;
+  color: maroon;
+}
+.mutate {
+  background-color: #ffcfcf;
+  padding: .5em;
+  border-left: 8px solid #ff1c1c;
+  font-style: italic;
+}
+.caution {
+  background-color: #ffe2b0;
+  padding: .5em;
+  border-left: 8px solid #ffbc47;
+}
+pre {
+  background-color: #eee;
+}
+code {
+  font-family: monospace;
+}
+.example-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.example {
+  overflow-x: auto;
+  width: 90%;
+  padding: 0 1em 1em 1em;
+}
+.ref-links {
+  text-decoration: none;
+  color: blue;
+}
+.ref-links:hover {
+  text-decoration: underline;
+}
+ol, ul {
+  margin-left: 1.5em;
+}
+
+@media only screen and (min-width: 650px) {
+  body {
+  margin: 0;
+  padding: 0;
+  min-width: 285px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+#navbar {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+}
+#navbar header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  margin: 0;
+  border-bottom: 4px solid #000;
+}
+#navbar h1 {
+  padding: 0 1em;
+}
+#nav-links {
+  border-bottom: none;
+  overflow-y: auto
+  height: 100%;
+}
+.link, .nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  padding: 1em;
+  border-bottom: 1px solid #000;
+}
+.main-link {
+  font-weight: bold;
+}
+.sub-link {
+  padding: 1em 2.5em;
+  font-family: monospace;
+}
+#main-doc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin-left: 40%;
+  border-left: 2px solid black;
+  padding: 0 1.5em;
+  overflow-x: hidden;
+}
+.main-section {
+  
+}
+header {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.25em;
+}
+h3 {
+    font-family: monospace;
+}
+p {
+  margin-left: 1.5em;
+}
+.name {
+  font-weight: bold;
+  background-color: #eee;
+  padding: 0 .25em;
+  color: maroon;
+}
+.caution {
+  background-color: #ffe2b0;
+  padding: .5em;
+  border-left: 8px solid #ffbc47;
+}
+pre {
+  background-color: #eee;
+}
+code {
+  font-family: monospace;
+}
+}
