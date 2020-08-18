@@ -1,5 +1,5 @@
 # Technical Documentation Page
-## Technologies: HTML, CSS
+### Created: Jun 25, 2020 || Status: Complete || Technologies: HTML, CSS
 
 **Description:** Technical documentation describing and detailing numerous JavaScript methods.
 
